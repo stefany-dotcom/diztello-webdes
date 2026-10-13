@@ -1,4 +1,5 @@
 /* ===== RESET AND VARIABLES ===== */
+/* FIXED MY COMMENTARIES ALONG WITH MINOR REVISIONS FOR HOME :- ) */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +34,7 @@ a {
     text-decoration: none;
 }
 
-/* ===== MOBILE STYLES (base) ===== */
+/* ===== MOBILE STYLES (BASE) ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -42,19 +43,35 @@ a {
     color: var(--white);
     /* DARK OVERLAY TO SEE THE TEXTS BETTER */
     background:
-        linear-gradient(rgba(11, 27, 51, 0.5), rgba(11, 27, 51, 0.5)),
+        linear-gradient(rgba(11, 27, 51, 0.4), rgba(11, 27, 51, 0.4)),
         url("img/home-bg1.jpg") center / cover no-repeat;
 }
 
+/* SETTING UP THE NAV TO FLEX DIRECTION COLUMN FOR MOBILE SCREENS */
 .nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+/* KEEPS THE LOGO AND LOCATION TOGETHER */
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-logo img {
-    width: 140px;
+    width: 160px;
+}
+
+.hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .nav-links {
@@ -66,27 +83,22 @@ a {
 
 .nav-links a {
     color: var(--white);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
 }
 
+/* CHANGED THE HOVER AND ACTIVE TO WHITE JUST LIKE THE FIGMA PROTOTYPE */
 .nav-links a.active,
 .nav-links a:hover {
-    border-bottom-color: var(--copper);
+    border-bottom-color: var(--white);
 }
 
-.hero-eyebrow {
-    margin-top: 1.5rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
+/* CENTERING THE MIDDLE TEXTS - HOPEFULLY IT STAYS CENTERED */
 .hero-content {
     flex: 1;
     display: flex;
@@ -95,31 +107,33 @@ a {
     justify-content: center;
     text-align: center;
     gap: 1.25rem;
+    padding-bottom: 2rem;
 }
 
 .hero-content h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 2.25rem;
-    line-height: 1.15;
-    max-width: 14ch;
+    line-height: 1.2;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-text {
-    max-width: 36ch;
     font-size: 1rem;
     line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* BUTTON STYLES WITH SHADOW FOR SOME DEPTH */
 .btn {
     display: inline-block;
     background-color: var(--copper);
     color: var(--navy);
     font-weight: 700;
-    padding: 0.8rem 1.75rem;
-    border-radius: 8px;
+    padding: 1rem 2rem;
+    border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -127,22 +141,33 @@ a {
 }
 
 /* ===== TABLET AND DESKTOP STYLES ===== */
+/* PLS WORK ON BIG SCREENS AND DONT BREAK RESPONSIVENESS TY */
 @media (min-width: 768px) {
     .hero {
-        padding: 1.5rem 4rem;
+        padding: 2rem 4rem;
     }
 
     .nav {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start; 
+    }
+
+    .nav-brand {
+        align-items: flex-start;
     }
 
     .nav-logo img {
-        width: 170px;
+        width: 190px;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.8rem;
     }
 
     .nav-links {
-        gap: 2rem;
+        gap: 2.5rem;
+        margin-top: 0.5rem; 
     }
 
     .nav-links a {
@@ -150,12 +175,10 @@ a {
     }
 
     .hero-content h1 {
-        font-size: 4rem;
-        max-width: 16ch;
+        font-size: 4.5rem; 
     }
 
     .hero-text {
-        max-width: 50ch;
         font-size: 1.1rem;
     }
 }
