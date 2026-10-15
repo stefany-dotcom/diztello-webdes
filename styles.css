@@ -89,7 +89,7 @@ a {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.55rem; /* <--- INCREASED FROM 0.25rem TO DROP THE LINE LOWER */
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s ease;
 }
@@ -142,6 +142,122 @@ a {
     background-color: var(--white);
 }
 
+/* ===== INNER PAGES / ABOUT PAGE BASE STYLES ===== */
+
+/* HEADER BANNER FOR ABOUT PAGE */
+.page-header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/home-bg2.jpg") center / cover no-repeat;
+    padding: 1.25rem 1.25rem 3rem 1.25rem;
+    color: var(--white);
+}
+
+.page-banner-content {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.page-banner-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.page-banner-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ABOUT PAGE CONTENT CONTAINER */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* ABOUT SECTION (TEXT + IMAGE) */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text h2,
+.values-section h2,
+.cta-banner h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+}
+
+.about-img img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* PRINCIPLES & VALUES CARDS */
+.values-section {
+    text-align: center;
+}
+
+.values-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.value-card {
+    background-color: var(--white);
+    padding: 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--copper);
+    text-align: left;
+}
+
+.value-card h3 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* CTA BANNER AT THE BOTTOM */
+.cta-banner {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    color: var(--white);
+}
+
+.cta-banner p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
 /* ===== TABLET AND DESKTOP STYLES ===== */
 /* PLS WORK ON BIG SCREENS AND DONT BREAK RESPONSIVENESS TY */
 @media (min-width: 768px) {
@@ -182,5 +298,31 @@ a {
 
     .hero-text {
         font-size: 0.95rem;
+    }
+
+/* ABOUT PAGE DESKTOP OVERRIDES */
+    .page-header {
+        padding: 2rem 4rem 3.5rem 4rem;
+    }
+
+    .page-banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .about-section {
+        flex-direction: row;
+    }
+
+    .about-text,
+    .about-img {
+        flex: 1;
+    }
+
+    .values-grid {
+        flex-direction: row;
+    }
+
+    .value-card {
+        flex: 1;
     }
 }
