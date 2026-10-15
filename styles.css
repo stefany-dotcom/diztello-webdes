@@ -1,5 +1,10 @@
 /* ===== RESET AND VARIABLES ===== */
 /* FIXED MY COMMENTARIES ALONG WITH MINOR REVISIONS FOR HOME :- ) */
+
+html {
+    overflow-y: scroll; /* FORCES SCROLLBAR TRACK ON ALL PAGES SO NAV NEVER SHIFTS (special thanks to google for this hack XD) */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +26,7 @@ body {
     background-color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scrollbar-gutter: stable; /* PREVENTS LAYOUT SHIFT WHEN SCROLLBAR APPEARS */
 }
 
 img {
@@ -258,6 +264,64 @@ a {
     font-size: 1rem;
 }
 
+/* ===== HOMEPAGE EXTENSION STYLES ===== */
+.home-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.home-services {
+    text-align: center;
+}
+
+.home-services h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--copper);
+    text-align: left;
+}
+
+.service-card h3 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* ===== TABLET AND DESKTOP STYLES ===== */
 /* PLS WORK ON BIG SCREENS AND DONT BREAK RESPONSIVENESS TY */
 @media (min-width: 768px) {
@@ -268,7 +332,7 @@ a {
     .nav {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start; 
+        align-items: center; /* CHANGED FROM flex-start TO center */ 
     }
 
     .nav-brand {
@@ -285,7 +349,8 @@ a {
 
     .nav-links {
         gap: 2.5rem;
-        margin-top: 0.5rem; 
+        margin-top: 0; /* CHANGED FROM 0.5rem TO 0 */
+
     }
 
     .nav-links a {
@@ -323,6 +388,15 @@ a {
     }
 
     .value-card {
+        flex: 1;
+    }
+
+    /* HOMEPAGE DESKTOP GRID OVERRIDES */
+    .services-grid {
+        flex-direction: row;
+    }
+
+    .service-card {
         flex: 1;
     }
 }
