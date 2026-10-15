@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Explore Diztello Construction's services: Civil engineering, structural development, renovations, and facility maintenance in Pampanga and Central Luzon.">
+    <title>Our Services | Diztello Construction</title>
+
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+
+    <!-- HEADER BANNER - USED SAME CLASS AS ABOUT PAGE SO DESIGN IS CONSISTENT -->
+    <header class = "page-header">
+        <nav class = "nav">
+            <!-- LOGO AND LOCATION WRAPPED IN DIV SO FLEXBOX DOESNT SEPARATE THEM -->
+            <div class = "nav-brand">
+                <a href = "home.html" class = "nav-logo">
+                    <img src = "img/diztello_logo.png" alt = "Diztello Construction logo">
+                </a>
+                <p class = "hero-eyebrow">Clark Field, Pampanga</p>
+            </div>
+
+            <!-- MAIN NAVIGATION LINKS - DONT FORGET TO MOVE ACTIVE CLASS IF UPDATING MULTIPLE PAGES! -->
+            <ul class = "nav-links">
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "services.html" class = "active">Services</a></li>
+                <li><a href = "projects.html">Projects</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class = "page-banner-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive engineering and construction solutions across Central Luzon.</p>
+        </div>
+    </header>
+
+    <!-- SERVICES CONTENT CONTAINER -->
+    <main class = "services-container">
+
+        <!-- SERVICE CARD 1 - ADDED LEFT ACCENT BORDER IN CSS TO MATCH FIGMA PROTOTYPE -->
+        <section class = "service-detail-card">
+            <div class = "service-detail-text">
+                <h2>1. Civil Engineering & Site Development</h2>
+                <p>We provide end-to-end structural development, land preparation, and foundation engineering for commercial spaces, warehouses, and residential communities in Pampanga.</p>
+                <ul class = "service-list">
+                    <li>Foundation & Structural Engineering</li>
+                    <li>Site Grading & Heavy Excavation</li>
+                    <li>Drainage Systems & Reinforced Concrete Works</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SERVICE CARD 2 -->
+        <section class = "service-detail-card">
+            <div class = "service-detail-text">
+                <h2>2. Renovations & Retrofitting</h2>
+                <p>Modernize existing homes, offices, and commercial properties with precision structural upgrades, spatial layout redesigns, and high-quality finishes.</p>
+                <ul class = "service-list">
+                    <li>Home & Commercial Office Remodeling</li>
+                    <li>Structural Extensions & Story Additions</li>
+                    <li>Interior & Exterior Structural Masonry</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SERVICE CARD 3 -->
+        <section class = "service-detail-card">
+            <div class = "service-detail-text">
+                <h2>3. Facility Maintenance & Waterproofing</h2>
+                <p>Protect your long-term investment against typhoon wear, moisture intrusion, and structural aging with targeted engineering maintenance.</p>
+                <ul class = "service-list">
+                    <li>Roof, Deck & Slab Polyurethane Waterproofing</li>
+                    <li>Industrial & Residential Protective Coating</li>
+                    <li>Routine Structural Safety Inspection & Repair</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA SECTION AT BOTTOM -->
+        <section class = "cta-banner">
+            <p>Looking for a custom engineering scope or detailed estimate?</p>
+            <h2>Let's Discuss Your Project Scope</h2>
+            <a href = "contact.html" class = "btn">Get in Touch</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER - REUSED CLASS ACROSS ALL HTML FILES -->
+    <footer class = "site-footer">
+        <p>&copy; 2026 Diztello Construction. Clark Field, Pampanga. All rights reserved.</p>
+    </footer>
+
+    <!-- JS SCRIPT TO TRIGGER FROSTED GLASS NAV BAR ON SCROLL DOWN (WORKS SMOOTH NOW TYG) -->
+    <script>
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

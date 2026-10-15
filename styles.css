@@ -149,7 +149,6 @@ a {
 }
 
 /* ===== INNER PAGES / ABOUT PAGE BASE STYLES ===== */
-
 /* HEADER BANNER FOR ABOUT PAGE */
 .page-header {
     background:
@@ -320,6 +319,42 @@ a {
     font-size: 0.85rem;
     opacity: 0.9;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* SLIM & SUBTLE STICKY NAV */
+.nav.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.35rem 4rem; /* REDUCED PADDING TO MAKE IT SLIM */
+    background: rgba(211, 209, 209, 0.25); /* LOW OPACITY (VERY LIGHT DARK TINT) */
+    backdrop-filter: blur(10px); /* FROSTED GLASS EFFECT */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* RESET NAV LINKS ALIGNMENT WHEN SCROLLED */
+.nav.scrolled {
+    align-items: center; /* KEEPS LOGO AND LINKS IN THE VERTICAL CENTER */
+}
+
+.nav.scrolled .nav-links {
+    margin-top: 0; /* PREVENTS LINKS FROM FLYING OFF THE TOP OF THE BAR */
+    margin-right: 0; /* RESETS HORIZONTAL SHIFT SO IT FITS CLEANLY */
+}
+
+/* SHRINK LOGO WHEN SCROLLED SO THE BAR STAYS COMPACT */
+.nav.scrolled .nav-logo img {
+    width: 95px;
+    transition: width 0.3s ease;
+}
+
+/* OPTIONAL: HIDE LOCATION SUBTITLE ON SCROLL TO SAVE VERTICAL SPACE */
+.nav.scrolled .hero-eyebrow {
+    display: none;
 }
 
 /* ===== TABLET AND DESKTOP STYLES ===== */

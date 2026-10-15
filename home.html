@@ -80,5 +80,15 @@
     <footer class = "site-footer">
         <p>&copy; 2026 Diztello Construction. Clark Field, Pampanga. All rights reserved.</p>
     </footer>
+    <script>
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
