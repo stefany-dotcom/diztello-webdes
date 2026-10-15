@@ -349,8 +349,8 @@ a {
 
     .nav-links {
         gap: 2.5rem;
-        margin-top: 0; /* CHANGED FROM 0.5rem TO 0 */
-
+        margin-top: -2.5rem;  /* PULLS IT UPWARD */
+        margin-right: 4.5rem;  /* SHIFTS IT TO THE LEFT */
     }
 
     .nav-links a {
