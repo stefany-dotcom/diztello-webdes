@@ -55,7 +55,7 @@ a {
 .nav-brand {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -68,6 +68,8 @@ a {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    color: var(--white);
+    margin-left: 8px;
 }
 
 .nav-links {
@@ -83,12 +85,12 @@ a {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-bottom: 0.55rem; /* <--- INCREASED FROM 0.25rem TO DROP THE LINE LOWER */
+    padding-bottom: 0.55rem; 
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s ease;
 }
 
-/* CHANGED THE HOVER AND ACTIVE TO WHITE JUST LIKE THE FIGMA PROTOTYPE */
+/* CHANGED THE HOVER AND ACTIVE TO WHITE JUST LIKE MY FIGMA PROTOTYPE */
 .nav-links a.active,
 .nav-links a:hover {
     border-bottom-color: var(--white);
@@ -120,7 +122,7 @@ a {
     opacity: 0.9;
 }
 
-/* BUTTON STYLES WITH SHADOW FOR SOME DEPTH */
+/* BUTTON STYLES WITH SUBTLE 3D DEPTH */
 .btn {
     display: inline-block;
     background-color: var(--copper);
@@ -128,12 +130,21 @@ a {
     font-weight: 700;
     padding: 1rem 2rem;
     border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-    transition: background-color 0.3s ease;
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--white);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    text-shadow: none;
 }
 
 /* CTA BANNER AT THE BOTTOM */
@@ -174,29 +185,35 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0.35rem 4rem; /* REDUCED PADDING TO MAKE IT SLIM */
-    background: rgba(211, 209, 209, 0.25); /* LOW OPACITY (VERY LIGHT DARK TINT) */
-    backdrop-filter: blur(10px); /* FROSTED GLASS EFFECT */
+    padding: 0.35rem 4rem;
+    background: rgba(211, 209, 209, 0.25);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     animation: slideDown 0.3s ease-in-out;
-    align-items: center; /* KEEPS LOGO AND LINKS IN THE VERTICAL CENTER */
+    align-items: center;
 }
 
-/* RESET NAV LINKS ALIGNMENT WHEN SCROLLED */
+.nav.scrolled .nav-links a {
+    color: var(--navy);
+}
+
+.nav.scrolled .nav-links a.active,
+.nav.scrolled .nav-links a:hover {
+    border-bottom-color: var(--navy);
+}
+
 .nav.scrolled .nav-links {
-    margin-top: 0; /* PREVENTS LINKS FROM FLYING OFF THE TOP OF THE BAR */
-    margin-right: 0; /* RESETS HORIZONTAL SHIFT SO IT FITS CLEANLY */
+    margin-top: 0;
+    margin-right: 0;
 }
 
-/* SHRINK LOGO WHEN SCROLLED SO THE BAR STAYS COMPACT */
 .nav.scrolled .nav-logo img {
     width: 95px;
     transition: width 0.3s ease;
 }
 
-/* HIDE LOCATION SUBTITLE ON SCROLL TO SAVE VERTICAL SPACE */
 .nav.scrolled .hero-eyebrow {
     display: none;
 }
@@ -207,7 +224,7 @@ a {
     .nav {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; /* CHANGED FROM flex-start TO center */
+        align-items: center; 
     }
 
     .nav-brand {
