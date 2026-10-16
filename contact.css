@@ -1,0 +1,115 @@
+/* ===== CONTACT PAGE EXCLUSIVE STYLES ===== */
+/* SEPARATED CONTACT FORM AND OFFICE INFO STYLES */
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-info h2,
+.contact-form-card h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--navy);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style: none;
+}
+
+.info-list li strong {
+    color: var(--copper);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-list li p {
+    margin-bottom: 0;
+    color: var(--charcoal);
+    font-weight: 700;
+}
+
+.contact-form-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--copper);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-family: "Arimo", sans-serif;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    background-color: #FAFAFA;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--copper);
+    background-color: var(--white);
+}
+
+.submit-btn {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* CONTACT PAGE DESKTOP OVERRIDES */
+@media (min-width: 768px) {
+    .contact-grid {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .contact-info,
+    .contact-form-card {
+        flex: 1;
+    }
+}
