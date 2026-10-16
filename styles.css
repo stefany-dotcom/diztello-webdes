@@ -3,7 +3,7 @@
 /* DECIDED TO SPLIT MY MAIN CSS INTO SEPARATE FILES PER PAGE FOR BETTER ORGANIZATION! */
 
 html {
-    overflow-y: scroll; /* FORCES SCROLLBAR TRACK ON ALL PAGES SO NAV NEVER SHIFTS (special thanks to google for this hack XD) */
+    overflow-y: scroll; /* (special thanks to google for this hack XD) */
 }
 
 * {
@@ -27,7 +27,7 @@ body {
     background-color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scrollbar-gutter: stable; /* PREVENTS LAYOUT SHIFT WHEN SCROLLBAR APPEARS */
+    scrollbar-gutter: stable; 
 }
 
 img {
@@ -100,7 +100,7 @@ a {
 .page-header {
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/home-bg2.jpg") center / cover no-repeat;
+        url("img/home-bg1.jpg") center / cover no-repeat;
     padding: 1.25rem 1.25rem 3rem 1.25rem;
     color: var(--white);
 }
