@@ -196,7 +196,7 @@ a {
     transition: width 0.3s ease;
 }
 
-/* OPTIONAL: HIDE LOCATION SUBTITLE ON SCROLL TO SAVE VERTICAL SPACE */
+/* HIDE LOCATION SUBTITLE ON SCROLL TO SAVE VERTICAL SPACE */
 .nav.scrolled .hero-eyebrow {
     display: none;
 }
