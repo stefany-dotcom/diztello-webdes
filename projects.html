@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "View recent construction and civil engineering projects completed by Diztello Construction across Central Luzon.">
+    <title>Our Projects | Diztello Construction</title>
+
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+
+    <!-- HERO / BANNER HEADER FOR PROJECTS -->
+    <header class = "page-header">
+        <nav class = "nav">
+            <!-- LOGO AND LOCATION TAG -->
+            <div class = "nav-brand">
+                <a href = "home.html" class = "nav-logo">
+                    <img src = "img/diztello_logo.png" alt = "Diztello Construction logo">
+                </a>
+                <p class = "hero-eyebrow">Clark Field, Pampanga</p>
+            </div>
+
+            <!-- NAV LINKS -->
+            <ul class = "nav-links">
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "services.html">Services</a></li>
+                <li><a href = "projects.html" class = "active">Projects</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class = "page-banner-content">
+            <h1>Featured Projects</h1>
+            <p>A showcase of structural builds, commercial civil works, and renovations across Pampanga.</p>
+        </div>
+    </header>
+
+    <!-- MAIN PORTFOLIO GRID -->
+    <main class = "projects-container">
+
+        <!-- TODO: NEED TO ASK GROUPMATES FOR REAL SITE PHOTOS, USING HOME BG AS TEMP PLACEHOLDERS FOR NOW -->
+        <div class = "projects-grid">
+
+            <!-- PROJECT 1 - USING ARTICLE TAG FOR BETTER SEMANTIC HTML (PROFESSOR LIKES THIS) -->
+            <article class = "project-card">
+                <div class = "project-img">
+                    <img src = "img/home-bg1.jpg" alt = "Commercial Warehouse Development in Clark">
+                </div>
+                <div class = "project-info">
+                    <span class = "project-tag">Civil Works</span>
+                    <h3>Commercial Warehouse Facility</h3>
+                    <p class = "project-location">Clark Freeport Zone, Pampanga</p>
+                    <p>Full site excavation, structural steel frame installation, and heavy-duty concrete slab flooring.</p>
+                </div>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class = "project-card">
+                <div class = "project-img">
+                    <img src = "img/home-bg2.jpg" alt = "Residential Renovation and Expansion">
+                </div>
+                <div class = "project-info">
+                    <span class = "project-tag">Renovation</span>
+                    <h3>Two-Story Residential Retrofit</h3>
+                    <p class = "project-location">Angeles City, Pampanga</p>
+                    <p>Complete second-floor addition, structural column reinforcement, and modern facade update.</p>
+                </div>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class = "project-card">
+                <div class = "project-img">
+                    <img src = "img/home-bg1.jpg" alt = "Roof Waterproofing and Painting">
+                </div>
+                <div class = "project-info">
+                    <span class = "project-tag">Maintenance</span>
+                    <h3>Industrial Slab & Roof Waterproofing</h3>
+                    <p class = "project-location">San Fernando, Pampanga</p>
+                    <p>Polyurethane membrane waterproofing application and complete structural weather sealing.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CALL TO ACTION BANNER -->
+        <section class = "cta-banner">
+            <h2>Have a Similar Build in Mind?</h2>
+            <p>We work directly with property owners, architects, and commercial developers across Central Luzon.</p>
+            <a href = "contact.html" class = "btn">Request a Proposal</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class = "site-footer">
+        <p>&copy; 2026 Diztello Construction. Clark Field, Pampanga. All rights reserved.</p>
+    </footer>
+
+    <!-- STICKY FROSTED NAV SCRIPT (DONT TOUCH IT ALREADY WORKS ON ALL PAGES) -->
+    <script>
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
