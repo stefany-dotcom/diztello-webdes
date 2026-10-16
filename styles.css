@@ -1,5 +1,6 @@
 /* ===== RESET AND VARIABLES ===== */
 /* FIXED MY COMMENTARIES ALONG WITH MINOR REVISIONS FOR HOME :- ) */
+/* DECIDED TO SPLIT MY MAIN CSS INTO SEPARATE FILES PER PAGE FOR BETTER ORGANIZATION! */
 
 html {
     overflow-y: scroll; /* FORCES SCROLLBAR TRACK ON ALL PAGES SO NAV NEVER SHIFTS (special thanks to google for this hack XD) */
@@ -40,19 +41,6 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-/* ===== MOBILE STYLES (BASE) ===== */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 1.25rem;
-    color: var(--white);
-    /* DARK OVERLAY TO SEE THE TEXTS BETTER */
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-        url("img/home-bg1.jpg") center / cover no-repeat;
 }
 
 /* SETTING UP THE NAV TO FLEX DIRECTION COLUMN FOR MOBILE SCREENS */
@@ -106,50 +94,7 @@ a {
     border-bottom-color: var(--white);
 }
 
-/* CENTERING THE MIDDLE TEXTS - HOPEFULLY IT STAYS CENTERED */
-.hero-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1.25rem;
-    padding-bottom: 2rem;
-}
-
-.hero-content h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* CHANGED FROM 800 TO MATCH FIGMA BOLD */
-    font-size: 2.25rem;
-    line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* LIGHTENED SHADOW */
-}
-
-.hero-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* BUTTON STYLES WITH SHADOW FOR SOME DEPTH */
-.btn {
-    display: inline-block;
-    background-color: var(--copper);
-    color: var(--navy);
-    font-weight: 700;
-    padding: 1rem 2rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--white);
-}
-
-/* ===== INNER PAGES / ABOUT PAGE BASE STYLES ===== */
-/* HEADER BANNER FOR ABOUT PAGE */
+/* ===== REUSABLE INNER PAGES HEADER BANNER BASE ===== */
 .page-header {
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -175,74 +120,20 @@ a {
     opacity: 0.9;
 }
 
-/* ABOUT PAGE CONTENT CONTAINER */
-.about-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-}
-
-/* ABOUT SECTION (TEXT + IMAGE) */
-.about-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
-.about-text h2,
-.values-section h2,
-.cta-banner h2 {
-    font-family: "Montserrat", sans-serif;
+/* BUTTON STYLES WITH SHADOW FOR SOME DEPTH */
+.btn {
+    display: inline-block;
+    background-color: var(--copper);
     color: var(--navy);
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease;
 }
 
-.about-text p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    color: var(--charcoal);
-}
-
-.about-img img {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* PRINCIPLES & VALUES CARDS */
-.values-section {
-    text-align: center;
-}
-
-.values-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.value-card {
+.btn:hover {
     background-color: var(--white);
-    padding: 1.75rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid var(--copper);
-    text-align: left;
-}
-
-.value-card h3 {
-    font-family: "Montserrat", sans-serif;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-}
-
-.value-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
 }
 
 /* CTA BANNER AT THE BOTTOM */
@@ -255,59 +146,15 @@ a {
 }
 
 .cta-banner h2 {
+    font-family: "Montserrat", sans-serif;
     color: var(--white);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .cta-banner p {
     margin-bottom: 1.5rem;
     font-size: 1rem;
-}
-
-/* ===== HOMEPAGE EXTENSION STYLES ===== */
-.home-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3.5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-}
-
-.home-services {
-    text-align: center;
-}
-
-.home-services h2 {
-    font-family: "Montserrat", sans-serif;
-    color: var(--navy);
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.services-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.service-card {
-    background-color: var(--white);
-    padding: 1.75rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid var(--copper);
-    text-align: left;
-}
-
-.service-card h3 {
-    font-family: "Montserrat", sans-serif;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-}
-
-.service-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
 }
 
 /* FOOTER STYLES */
@@ -334,13 +181,10 @@ a {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     animation: slideDown 0.3s ease-in-out;
-}
-
-/* RESET NAV LINKS ALIGNMENT WHEN SCROLLED */
-.nav.scrolled {
     align-items: center; /* KEEPS LOGO AND LINKS IN THE VERTICAL CENTER */
 }
 
+/* RESET NAV LINKS ALIGNMENT WHEN SCROLLED */
 .nav.scrolled .nav-links {
     margin-top: 0; /* PREVENTS LINKS FROM FLYING OFF THE TOP OF THE BAR */
     margin-right: 0; /* RESETS HORIZONTAL SHIFT SO IT FITS CLEANLY */
@@ -357,17 +201,13 @@ a {
     display: none;
 }
 
-/* ===== TABLET AND DESKTOP STYLES ===== */
+/* ===== TABLET AND DESKTOP STYLES (GLOBAL NAV & HEADERS) ===== */
 /* PLS WORK ON BIG SCREENS AND DONT BREAK RESPONSIVENESS TY */
 @media (min-width: 768px) {
-    .hero {
-        padding: 2rem 4rem;
-    }
-
     .nav {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; /* CHANGED FROM flex-start TO center */ 
+        align-items: center; /* CHANGED FROM flex-start TO center */
     }
 
     .nav-brand {
@@ -384,54 +224,19 @@ a {
 
     .nav-links {
         gap: 2.5rem;
-        margin-top: -2.5rem;  /* PULLS IT UPWARD */
-        margin-right: 4.5rem;  /* SHIFTS IT TO THE LEFT */
+        margin-top: -2.5rem; /* PULLS IT UPWARD */
+        margin-right: 4.5rem; /* SHIFTS IT TO THE LEFT */
     }
 
     .nav-links a {
         font-size: 15px;
     }
 
-    .hero-content h1 {
-        font-size: clamp(2.5rem, 4.5vw, 3.75rem);
-    }
-
-    .hero-text {
-        font-size: 0.95rem;
-    }
-
-/* ABOUT PAGE DESKTOP OVERRIDES */
     .page-header {
         padding: 2rem 4rem 3.5rem 4rem;
     }
 
     .page-banner-content h1 {
         font-size: 3rem;
-    }
-
-    .about-section {
-        flex-direction: row;
-    }
-
-    .about-text,
-    .about-img {
-        flex: 1;
-    }
-
-    .values-grid {
-        flex-direction: row;
-    }
-
-    .value-card {
-        flex: 1;
-    }
-
-    /* HOMEPAGE DESKTOP GRID OVERRIDES */
-    .services-grid {
-        flex-direction: row;
-    }
-
-    .service-card {
-        flex: 1;
     }
 }
