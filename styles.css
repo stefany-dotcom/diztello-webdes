@@ -12,11 +12,16 @@ html {
     box-sizing: border-box;
 }
 
-/* ===== HTML5 RESET ===== */
-article, section, aside, figure, figcaption, main, header, footer {
+/* ===== HTML5 & VIDEO RESET ===== */
+article, section, aside, figure, figcaption, main, header, footer, video {
     display: block;
     margin: 0;
     padding: 0;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
 }
 
 :root {
