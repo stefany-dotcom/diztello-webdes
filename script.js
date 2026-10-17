@@ -36,3 +36,20 @@ const revealOnScroll = new IntersectionObserver(function(entries, observer) {
 reveals.forEach(reveal => {
     revealOnScroll.observe(reveal);
 });
+
+const menuIcon = document.createElement('div');
+menuIcon.classList.add('hamburger-menu');
+menuIcon.innerHTML = '&#9776;'; 
+document.querySelector('.nav').prepend(menuIcon);
+
+const navLinksList = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+
+    if (navLinksList.style.display === 'flex') {
+        navLinksList.style.display = 'none';
+    } else {
+        navLinksList.style.display = 'flex';
+        navLinksList.style.flexDirection = 'column';
+    }
+});

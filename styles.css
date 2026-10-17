@@ -1,6 +1,6 @@
 /* ===== RESET AND VARIABLES ===== */
 /* FIXED MY COMMENTARIES ALONG WITH MINOR REVISIONS FOR HOME :- ) */
-/* DECIDED TO SPLIT MY MAIN CSS INTO SEPARATE FILES PER PAGE FOR BETTER ORGANIZATION! */
+/* DECIDED TO SPLIT MY MAIN CSS INTO SEPARATE FILES PER PAGE FOR BETTER ORGANIZATION */
 
 html {
     overflow-y: scroll; /* (special thanks to google for this hack XD) */
@@ -85,7 +85,7 @@ a {
 }
 
 .nav-links {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem 1.25rem;
@@ -361,6 +361,29 @@ a {
 
 .footer-socials a:hover img {
     transform: scale(1.1);
+}
+
+/* ===== HAMBURGER MENU STYLES ===== */
+.hamburger-menu {
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.nav.scrolled .hamburger-menu {
+    color: var(--navy);
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none !important; 
+    }
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+    }
 }
 
 /* ===== FOOTER DESKTOP LAYOUT OVERRIDE ===== */
