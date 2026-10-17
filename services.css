@@ -1,5 +1,5 @@
 /* ===== SERVICES PAGE EXCLUSIVE STYLES ===== */
-/* MOVED TO ITS OWN FILE SO SERVICES LAYOUT IS ISOLATED AND EASY TO EDIT */
+/* MOVED TO ITS OWN FILE SO SERVICES LAYOUT IS ISOLATED AND EASY TO EDIT FOR ME */
 
 .services-container {
     max-width: 1100px;
@@ -42,4 +42,47 @@
     font-size: 0.9rem;
     color: var(--charcoal);
     margin-bottom: 0.4rem;
+}
+
+/* ===== RESPONSIVE TABLE STYLES ===== */
+.service-table-section {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--copper);
+}
+
+.table-container {
+    overflow-x: auto; 
+    margin-top: 1.5rem;
+}
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; 
+}
+
+.service-table th {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: left;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.service-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #DDDDDD;
+    color: var(--charcoal);
+}
+
+/* ROW COLORS */
+.service-table tbody tr:nth-child(even) {
+    background-color: var(--cream);
+}
+
+.service-table tbody tr:hover {
+    background-color: rgba(129, 76, 32, 0.1);
 }
