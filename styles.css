@@ -12,7 +12,7 @@ html {
     box-sizing: border-box;
 }
 
-/* ===== STAGE 7: HTML5 RESET ===== */
+/* ===== HTML5 RESET ===== */
 article, section, aside, figure, figcaption, main, header, footer {
     display: block;
     margin: 0;
@@ -328,6 +328,34 @@ a {
     opacity: 0.6;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== TELEPHONE LINK STYLES ===== */
+.phone-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: var(--copper);
+}
+
+/* ===== SOCIAL MEDIA ICONS STYLES ===== */
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.footer-socials img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover img {
+    transform: scale(1.1);
 }
 
 /* ===== FOOTER DESKTOP LAYOUT OVERRIDE ===== */
