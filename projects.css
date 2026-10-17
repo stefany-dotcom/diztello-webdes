@@ -36,6 +36,17 @@
     object-fit: cover;
 }
 
+/* ===== STAGE 7: FIGCAPTION STYLES ===== */
+.project-img figcaption {
+    background-color: var(--navy);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 0.35rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 .project-info {
     padding: 1.5rem;
 }
@@ -71,11 +82,16 @@
     line-height: 1.5;
 }
 
-/* PROJECTS DESKTOP 3-COLUMN GRID OVERRIDE */
+/* PROJECTS DESKTOP GRID OVERRIDE */
 @media (min-width: 768px) {
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* ===== CSS GRID SPAN RULE ===== */
+    .project-card.featured {
+        grid-column: span 2; 
     }
 }
