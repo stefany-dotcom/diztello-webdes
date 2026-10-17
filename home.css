@@ -1,5 +1,8 @@
-/* ===== HOMEPAGE EXCLUSIVE STYLES ===== */
-/* MOVED FROM MAIN CSS FOR CLEANER FILE ORGANIZATION */
+/* 
+===== HOMEPAGE EXCLUSIVE STYLES =====
+
+MOVED FROM MAIN CSS FOR CLEANER FILE ORGANIZATION 
+*/
 
 /* ===== MOBILE STYLES (BASE) ===== */
 .hero {
@@ -132,4 +135,77 @@
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== 4-PHASE PROCESS SECTION ===== */
+.process-section {
+    padding: 4rem 1.25rem;
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.process-header h2 {
+    color: var(--navy);
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.process-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.process-step {
+    background-color: var(--cream);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--copper);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: var(--copper);
+    opacity: 0.2;
+    margin-bottom: -15px; 
+
+.process-step h3 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* TABLET & DESKTOP GRID OVERRIDE */
+@media (min-width: 768px) {
+    .process-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .process-step {
+        width: calc(50% - 1rem); 
+    }
 }

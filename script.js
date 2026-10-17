@@ -1,11 +1,12 @@
-/* ===== GLOBAL JAVASCRIPT FOR DIZTELLO CONSTRUCTION ===== */
-/* MOVED FROM INLINE SCRIPTS IN HTML TO A SINGLE REUSABLE FILE FOR CLEAN ORGANIZED CODE! */
+/* 
+===== GLOBAL JAVASCRIPT =====
 
-/* ===== GLOBAL JAVASCRIPT FOR DIZTELLO CONSTRUCTION ===== */
+MOVED FROM MY INLINE SCRIPTS IN HTML TO A SINGLE REUSABLE FILE FOR CLEAN ORGANIZED CODE 
+*/
 
 const nav = document.querySelector('.nav');
 
-// 1. FROSTED STICKY HEADER
+// FROSTED STICKY HEADER
 window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
         nav.classList.add('scrolled');
@@ -14,7 +15,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 2. SCROLL REVEAL ANIMATIONS 
+// SCROLL REVEAL ANIMATIONS 
 const reveals = document.querySelectorAll('.reveal');
 
 const revealOptions = {
