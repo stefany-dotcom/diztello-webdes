@@ -182,7 +182,8 @@ MOVED FROM MAIN CSS FOR CLEANER FILE ORGANIZATION
     font-weight: 800;
     color: var(--copper);
     opacity: 0.2;
-    margin-bottom: -15px; 
+    margin-bottom: -15px;
+}
 
 .process-step h3 {
     color: var(--navy);

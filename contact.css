@@ -49,6 +49,17 @@ SEPARATED CONTACT FORM AND OFFICE INFO STYLES
     font-weight: 700;
 }
 
+.info-list li a {
+    color: var(--charcoal);
+    text-decorateion: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.info-list li a:hover {
+    color: var(--navy);
+}
+
 .contact-form-card {
     background-color: var(--white);
     padding: 2rem;
