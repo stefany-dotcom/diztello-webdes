@@ -79,9 +79,13 @@ MOVED FROM MAIN CSS FOR CLEANER FILE ORGANIZATION
         flex-direction: row;
     }
 
-    .about-text,
-    .about-img {
-        flex: 1;
+    .about-img img,
+    .about-img video {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
     }
 
     .values-grid {

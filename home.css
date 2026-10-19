@@ -31,7 +31,7 @@ MOVED FROM MAIN CSS FOR CLEANER FILE ORGANIZATION
 
 .hero-content h1 {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* CHANGED FROM 800 TO MATCH FIGMA BOLD */
+    font-weight: 700; /* CHANGED FROM 800 TO MATCH MY FIGMA BOLD FONT */
     font-size: 2.25rem;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* LIGHTENED SHADOW */

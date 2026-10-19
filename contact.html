@@ -61,99 +61,84 @@ gumamit din po ako ng high-quality stock photos as stand-ins para sa project ima
             </ul>
         </nav>
 
-        <div class = "page-banner-content">
-            <h1>Get in Touch</h1>
-            <p>Reach out to our engineering team for inquiries, site visits, or cost estimates.</p>
+        <!-- OVERLAPPING SPLIT LAYOUT CONTAINER -->
+        <div class = "split-contact-container">
+            
+            <!-- LEFT COLUMN: TEXT ON BACKGROUND -->
+            <div class = "split-contact-info reveal">
+                <h1>Contact Us</h1>
+                <p class = "contact-subtext">Reach out to our engineering team for inquiries, site visits, or cost estimates.</p>
+                
+                <div class = "contact-details">
+                    <h4>CALL:</h4>
+                    <p><a href = "tel:+639050486297" class = "phone-link">0905 - 048 - 6297</a></p>
+                    
+                    <h4>EMAIL:</h4>
+                    <p><a href = "mailto:diztelloconser@gmail.com" class = "phone-link">diztelloconser@gmail.com</a></p>
+                    
+                    <h4>LOCATION:</h4>
+                    <p>Lot 14 Blk 14 Remedios St.,<br>Green Meadow Subd., Mabiga,<br>Mabalacat City, Pampanga</p>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: OVERLAPPING FORM CARD -->
+            <div class = "contact-form-card overlapping-card reveal">
+                <form class = "minimalist-form" action = "#" method = "POST">
+                    
+                    <div class = "form-group">
+                        <label for = "firstname">First Name</label>
+                        <input type = "text" id = "firstname" name = "firstname" placeholder = "Please enter your first name..." required>
+                    </div>
+                    
+                    <div class = "form-group">
+                        <label for = "lastname">Last Name</label>
+                        <input type = "text" id = "lastname" name = "lastname" placeholder = "Please enter your last name..." required>
+                    </div>
+
+                    <div class = "form-group">
+                        <label for = "email">Email Address</label>
+                        <input type = "email" id = "email" name = "email" placeholder = "name@example.com" required>
+                    </div>
+
+                    <div class = "form-group">
+                        <label for = "service">Service Required *</label>
+                        <select id = "service" name = "service" required>
+                            <option value = "" disabled selected>Select a service</option>
+                            <option value = "civil">Civil Engineering / Site Development</option>
+                            <option value = "renovation">Residential / Commercial Renovation</option>
+                            <option value = "maintenance">Facility Maintenance / Waterproofing</option>
+                            <option value = "other">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class = "form-group">
+                        <label for = "message">Your Message</label>
+                        <textarea id = "message" name = "message" rows = "4" placeholder = "Please let us know what you're looking for..." required></textarea>
+                    </div>
+
+                    <button type = "submit" class = "btn outline-submit-btn">SUBMIT ENQUIRY</button>
+                </form>
+            </div>
         </div>
     </header>
 
-    <!-- MAIN CONTACT CONTAINER -->
-    <main class = "contact-container">
+    <!-- CREAM SPACING TO HOLD THE OVERLAPPING CARD -->
+    <main class = "contact-bottom-spacing"></main>
 
-        <div class = "contact-grid">
+    <!-- FULL WIDTH LOCATION MAP -->
+    <section class = "location-map-section reveal">
+        <iframe 
+            src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15403.493836371587!2d120.5750!3d15.2200!2m3!1f0!0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396ec236b2885ef%3A0xb35a0937a0a0300d!2sGreen%20Meadows%20Subdivision%2C%20Mabalacat%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" 
+            width = "100%" 
+            height = "450" 
+            style = "border: 0;" 
+            allowfullscreen = "" 
+            loading = "lazy" 
+            referrerpolicy = "no-referrer-when-downgrade">
+        </iframe>
+    </section>
 
-            <!-- LEFT COLUMN: OFFICE CONTACT DETAILS (WILL FLEX TO 2 COLUMNS ON DESKTOP SCREENS) -->
-            <div class = "contact-info">
-                <h2>Head Office Details</h2>
-                <p>Feel free to visit our Clark Field office or send us an email regarding your project specifications.</p>
-
-                <ul class = "info-list">
-                    <li>
-                        <strong>Location:</strong>
-                        <p>Lot 14 Blk 14 Remedios St., Green Meadow Subd., Mabiga, Mabalacat City, Pampanga</p>
-                        
-                        <!-- COMPACT MAP UNDER LOCATION -->
-                        <div class = "location-map">
-                            <iframe 
-                                src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15403.493836371587!2d120.5750!3d15.2200!2m3!1f0!0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396ec236b2885ef%3A0xb35a0937a0a0300d!2sGreen%20Meadows%20Subdivision%2C%20Mabalacat%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" 
-                                width = "100%" 
-                                height = "150" 
-                                style = "border:0;" 
-                                allowfullscreen = "" 
-                                loading = "lazy" 
-                                referrerpolicy = "no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </li>
-                    <li>
-                        <strong>Phone / Mobile:</strong>
-                        <p><a href = "tel:+639050486297" class = "phone-link">0905 - 048 - 6297</a></p>
-                    </li>
-                    <li>
-                        <strong>Email Address:</strong>
-                        <p>diztelloconser@gmail.com / dizon.jonathan41@yahoo.com</p>
-                    </li>
-                    <li>
-                        <strong>Office Hours:</strong>
-                        <p>Monday - Saturday: 8:00 AM - 5:00 PM</p>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- RIGHT COLUMN: ESTIMATE FORM -->
-            <div class = "contact-form-card">
-                <h2>Request an Estimate</h2>
-                <form class = "contact-form" action = "#" method = "POST">
-                    <fieldset class = "form-fieldset">
-                        <legend class = "form-legend">Estimate Request Details</legend>
-                        
-                        <div class = "form-group">
-                            <label for = "fullname">Full Name *</label>
-                            <input type = "text" id = "fullname" name = "fullname" placeholder = "e.g., David Smith" required>
-                        </div>
-
-                        <div class = "form-group">
-                            <label for = "email">Email Address *</label>
-                            <input type = "email" id = "email" name = "email" placeholder = "e.g., name@example.com" required>
-                        </div>
-
-                        <div class = "form-group">
-                            <label for = "service">Service Required *</label>
-                            <select id = "service" name = "service" required>
-                                <option value = "" disabled selected>Select a service</option>
-                                <option value = "civil">Civil Engineering / Site Development</option>
-                                <option value = "renovation">Residential / Commercial Renovation</option>
-                                <option value = "maintenance">Facility Maintenance / Waterproofing</option>
-                                <option value = "other">General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div class = "form-group">
-                            <label for = "message">Project Details / Message *</label>
-                            <textarea id = "message" name = "message" rows = "5" placeholder = "Include project location, estimated timeline, or scope specifications..." required></textarea>
-                        </div>
-
-                        <div class = "form-buttons">
-                            <button type = "submit" class = "btn submit-btn">Submit Request</button>
-                            <button type = "reset" class = "btn reset-btn">Reset Form</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-
-        </div>
-
-    </main>
+    <!-- EXPANDED FOOTER -->
 
     <!-- EXPANDED FOOTER -->
     <footer class = "site-footer">

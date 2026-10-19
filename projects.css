@@ -1,7 +1,7 @@
 /* 
 ===== PROJECTS PAGE EXCLUSIVE STYLES =====
 
-SEPARATED PORTFOLIO GRID STYLES FOR CLEANER PROJECT ARCHITECTURE 
+SEPARATED PORTFOLIO GRID STYLES FOR A CLEANER PROJECT LAYOUT 
 */
 
 .projects-container {
@@ -39,7 +39,7 @@ SEPARATED PORTFOLIO GRID STYLES FOR CLEANER PROJECT ARCHITECTURE
     object-fit: cover;
 }
 
-/* ===== STAGE 7: FIGCAPTION STYLES ===== */
+/* ===== FIGCAPTION STYLES ===== */
 .project-img figcaption {
     background-color: var(--navy);
     color: var(--white);
