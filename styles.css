@@ -142,29 +142,30 @@ a {
     opacity: 0.9;
 }
 
-/* BUTTON STYLES WITH SUBTLE 3D DEPTH */
+/* ===== BASE BUTTON STYLES ===== */
 .btn {
     display: inline-block;
     background-color: var(--copper);
-    color: var(--navy);
+    color: var(--white);
     font-weight: 700;
     padding: 1rem 2rem;
     border-radius: 6px;
-
     border: 1px solid rgba(0, 0, 0, 0.12);
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-
     transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--white);
+    color: var(--navy);
     border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-    text-shadow: none;
+}
+
+/* ===== HERO BUTTON OVERRIDE ===== */
+.hero .btn {
+    background-color: var(--white);
+    color: var(--navy);
 }
 
 /* CTA BANNER AT THE BOTTOM */

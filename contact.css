@@ -51,7 +51,7 @@ SEPARATED CONTACT FORM AND OFFICE INFO STYLES
 
 .info-list li a {
     color: var(--charcoal);
-    text-decorateion: none;
+    text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -109,10 +109,18 @@ SEPARATED CONTACT FORM AND OFFICE INFO STYLES
 }
 
 .submit-btn {
+    background-color: var(--navy);
+    color: var(--white);
     border: none;
     cursor: pointer;
     width: 100%;
     margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--copper);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* CONTACT PAGE DESKTOP OVERRIDES */
@@ -153,13 +161,14 @@ SEPARATED CONTACT FORM AND OFFICE INFO STYLES
 
 .reset-btn {
     background-color: #E0E0E0;
-    color: var(--charcoal);
+    color: var(--navy);
     border: none;
     cursor: pointer;
 }
 
 .reset-btn:hover {
-    background-color: #CCCCCC;
+    background-color: #BEBEBE;
+    color: var(--charcoal);
 }
 
 /* ===== CONTACT DESKTOP OVERRIDES UPDATE ===== */
